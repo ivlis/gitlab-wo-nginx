@@ -7,4 +7,5 @@ RUN rm -rf /etc/supervisor/conf.d/nginx.conf
 EXPOSE 22
 
 VOLUME /home/git/gitlab/tmp/sockets/
+VOLUME /home/git/gitlab/public
 

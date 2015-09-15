@@ -8,5 +8,7 @@ RUN rm -rf /home/git/gitlab/tmp/sockets/ && mkdir -p /srv/gitlab/sockets/
 
 RUN ln -s /srv/gitlab/sockets/ /home/git/gitlab/tmp/sockets
 
+RUN sed '/appStart /a\  chmod 0777 /srv/gitlab/sockets/' -i  /opt/entrypoint.sh
+
 EXPOSE 22
 
